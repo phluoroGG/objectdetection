@@ -24,7 +24,7 @@ login_register.addEventListener('click', async (e) => {
 });
 
 function loginRequest() {
-    fetch("https://objectdetection-phluorogg.cloud.okteto.net:8000/api/token/", {
+    fetch("https://objectdetection-back-phluorogg.cloud.okteto.net:8000/api/token/", {
     method: "POST",
     headers: {
         'Content-type': 'application/json'

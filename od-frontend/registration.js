@@ -25,7 +25,7 @@ button_register.addEventListener('click', async (e) => {
 });
 
 function registrationRequest() {
-    return fetch("https://objectdetection-phluorogg.cloud.okteto.net:8000/register", {
+    return fetch("https://objectdetection-back-phluorogg.cloud.okteto.net:8000/register", {
     method: "POST",
     headers: {
         'Content-type': 'application/json'

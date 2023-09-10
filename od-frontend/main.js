@@ -77,7 +77,7 @@ function detectRequest() {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
     }
-    fetch(`https://objectdetection-phluorogg.cloud.okteto.net:8000/detect?score_threshold=${accuracy}&max_results=${max_count}&color=${color}`, {
+    fetch(`https://objectdetection-back-phluorogg.cloud.okteto.net:8000/detect?score_threshold=${accuracy}&max_results=${max_count}&color=${color}`, {
     method: "POST",
     body: formData,
     headers: config

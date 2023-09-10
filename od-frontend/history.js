@@ -14,7 +14,7 @@ if (localStorage.getItem('token') == null) {
 }
 
 function historyRequest(page) {
-    fetch(`https://objectdetection-phluorogg.cloud.okteto.net:8000/history`, {
+    fetch(`https://objectdetection-back-phluorogg.cloud.okteto.net:8000/history`, {
     method: "POST",
     headers: {
         'Content-type': 'application/json',

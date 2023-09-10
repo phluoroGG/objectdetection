@@ -5,8 +5,8 @@ networks:
     driver: bridge
 
 services:
-  backend:
-    container_name: objectdetection
+  objectdetection-back:
+    container_name: objectdetection-back
     networks:
       - my_network
     build: ./od-backend
@@ -15,7 +15,7 @@ services:
     ports:
       - "8000:8000"
 
-  frontend:
+  objectdetection:
     container_name: objectdetection
     networks:
       - my_network
