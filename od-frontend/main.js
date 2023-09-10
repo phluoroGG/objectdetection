@@ -53,21 +53,17 @@ const button_detect = document.querySelector('.btn_detect');
 
 var max_count = max_count_field.value;
 var accuracy = accuracy_field.value;
-var color = color_field.value;
+var color = color_field.value.slice(1);
 
 max_count_field.addEventListener('change', (e) => max_count = e.target.value);
 accuracy_field.addEventListener('change', (e) => accuracy = e.target.value);
-color_field.addEventListener('change', (e) => color = e.target.value);
+color_field.addEventListener('change', (e) => color = e.target.value.slice(1));
 
 button_detect.addEventListener('click', async (e) => {
     e.preventDefault();
     if (formData == null) {
         Swal.fire("Ошибка", "Загрузите изображение!", "warning");
     } else {
-	if (color.length == 7) {
-            color = color.slice(1);
-        }
-        console.log(color);
         await detectRequest();
     }
 });
