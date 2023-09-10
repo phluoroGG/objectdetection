@@ -25,7 +25,7 @@ button_register.addEventListener('click', async (e) => {
 });
 
 function registrationRequest() {
-    return fetch("http://127.0.0.1:8000/register", {
+    return fetch("https://objectdetection-phluorogg.cloud.okteto.net:8000/register", {
     method: "POST",
     headers: {
         'Content-type': 'application/json'
@@ -40,7 +40,7 @@ function registrationRequest() {
         Swal.fire("Успех", "Регистрация выполнена!", "success")
         .then((result) => {
             if (result.isConfirmed) {
-                window.location.replace("http://127.0.0.1:5500/login.html");
+                window.location.replace("https://objectdetection-phluorogg.cloud.okteto.net:5500/login.html");
             }
         });
         

@@ -77,7 +77,7 @@ function detectRequest() {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
     }
-    fetch(`http://127.0.0.1:8000/detect?score_threshold=${accuracy}&max_results=${max_count}&color=${color}`, {
+    fetch(`https://objectdetection-phluorogg.cloud.okteto.net:8000/detect?score_threshold=${accuracy}&max_results=${max_count}&color=${color}`, {
     method: "POST",
     body: formData,
     headers: config
@@ -88,7 +88,7 @@ function detectRequest() {
             Swal.fire("Ошибка", "Ошибка авторизации!", "error")
             .then((result) => {
                 if (result.isConfirmed) {
-                    window.location.replace("http://127.0.0.1:5500/login.html");
+                    window.location.replace("https://objectdetection-phluorogg.cloud.okteto.net:5500/login.html");
                 }
             });
         } else if (status == '400') {

@@ -6,7 +6,7 @@ networks:
 
 services:
   backend:
-    container_name: backend
+    container_name: objectdetection
     networks:
       - my_network
     build: ./od-backend
@@ -16,7 +16,7 @@ services:
       - "8000:8000"
 
   frontend:
-    container_name: frontend
+    container_name: objectdetection
     networks:
       - my_network
     build: ./od-frontend
