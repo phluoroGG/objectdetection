@@ -64,7 +64,9 @@ button_detect.addEventListener('click', async (e) => {
     if (formData == null) {
         Swal.fire("Ошибка", "Загрузите изображение!", "warning");
     } else {
-        color = color.slice(1);
+	if (color.length == 7) {
+            color = color.slice(1);
+        }
         console.log(color);
         await detectRequest();
     }
