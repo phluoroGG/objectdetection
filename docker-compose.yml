@@ -1,0 +1,29 @@
+version: "3.8"
+
+networks:
+  my_network:
+    driver: bridge
+
+services:
+  backend:
+    container_name: backend
+    networks:
+      - my_network
+    build: ./od-backend
+    command: python manage.py runserver 0.0.0.0:8000
+    restart: always
+    ports:
+      - "8000:8000"
+
+  frontend:
+    container_name: frontend
+    networks:
+      - my_network
+    build: ./od-frontend
+    restart: always
+    ports:
+      - "5500:80"
+    depends_on:
+      - backend
+
+ 

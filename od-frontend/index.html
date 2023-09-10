@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="styles/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link href=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css " rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Object Detection</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="info.html">Инфо</a></li>
+                <li><a id="login_nav" href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid-center">
+        <form>
+            <label class="photo-field">
+                <input name="myFile" type="file" class="mainblock" onchange="load(this)" accept=".jpg, .jpeg, .png">
+                <img src="photo.png" id="preview">
+            </label>
+        </form>
+        <div class="login-page">
+            <div class="form">
+              <form>
+                <span></span><br>
+                <input class="max_count" type="number" min="1" max="50" placeholder="Max count results"/>
+                <label for="" class="label-pl">Максимум объектов</label>
+                <input class="accuracy" type="number" min="0.1" max="1" step="0.01" placeholder="Accuracy"/>
+                <label for="" class="label-pl">Точность</label>
+                <label for="">Цвет границ</label>
+                <input type="color" class="color" value="#d80000">
+                <button placeholder="цвет" class="btn_detect">обнаружить</button>
+              </form> 
+            </div>
+         </div>
+        <div class="photo-result"> 
+         <img id="result">
+        </div>
+    </div>
+
+     <script src="main.js"></script>
+
+     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js "></script>
+</body>
+</html>

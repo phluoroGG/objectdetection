@@ -1,0 +1,41 @@
+html body {
+    width: 100%;
+    height: 100%;
+}
+.grid-center {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.photo-field img {
+    width: 450px;
+}
+
+.photo-field {
+    width: 450px;
+    border: 3px solid #000000;
+    display: block;
+    cursor: pointer;
+}
+
+.photo-result {
+    width: 650px;
+}
+
+.photo-result img {
+    width: 650px;
+}
+
+.photo-field input {
+    display: none;
+}
+
+.photo-field.drop {
+    border-style: dashed;
+    border-color: red;
+}
+
+

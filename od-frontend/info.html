@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инфо</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="styles/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/header.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Object Detection</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="history.html">История</a></li>
+                <li><a href="info.html">Инфо</a></li>
+                <li><a id="login_nav" href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid-center">
+        <h1>С помощью этого сайта вы можете идентифицировать объекты на изображении.<h1>
+        <h2>Как обнаружить объекты на изображении</h2>
+        <ul>
+            <li><b>1. Нажмите внутри области размещения файлов, чтобы выбрать и загрузить файл изображения, или перетащите туда свой файл.</b></li>
+            <li><b>2. Ниже выберите точность обнаружения, максимальное количество объектов, которые вы хотите обнаружить, и цвет для ограничивающих рамок.</b></li>
+            <li><b>3. Нажмите кнопку «Обнаружить», чтобы начать процесс обнаружения объектов.</b></li>
+            <li><b>4. После обнаружения всех объектов на странице появляется полученное изображение.</b></li>
+            <li><b>5. Если вы авторизованы, то вы сможете просмотреть это изображение в истории ваших изображений.</b></li>
+        </ul>
+
+        <h2>Часто задаваемые вопросы</h2>
+        <ul>
+            <li><b>В: Сколько времени требуется для обнаружения объектов на изображении?</b></li>
+            <li><b>О: Это зависит от размера входного изображения. Обычно это занимает несколько секунд.</b></li>
+            <br>
+            <li><b>В: Какой метод обнаружения объектов вы используете?</b></li>
+            <li><b>О: Мы используем инструмент MediaPipe, созданный компанией Google. Используемая модель - EfficientDet-Lite0. <a href="https://developers.google.com/mediapipe/solutions/vision/object_detector">Подробнее</a></b></li>
+            <br>
+            <li><b>В: Какие объекты вы можете обнаружить на изображениях?</b></li>
+            <li><b>О: На изображении мы можем обнаружить 80 различных объектов.</b></li>
+            <br>
+            <li><b>В: Какие форматы изображений вы поддерживаете?</b></li>
+            <li><b>О: Мы поддерживаем изображения JPG, PNG, JPEG.</b></li>
+        </ul>
+
+        <h2>Пример работы нашего веб-сайта</h2>
+        <img src="image.png" alt="">
+
+        <h2>Контакты:</h2>
+        <ul>
+            <li><b>- phluoro@gmail.com</b></li>
+            <br>
+            <li><b>- <a href="https://vk.com/id298078307">ВКонтакте</a></b></li>
+            
+        </ul>
+    </div>
+
+    <script src="info.js"></script>
+
+    <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js "></script>
+</body>
+</html>
