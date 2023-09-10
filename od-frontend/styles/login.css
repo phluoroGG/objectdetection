@@ -26,6 +26,28 @@
   box-sizing: border-box;
   font-size: 14px;
 }
+.form input[type=text] {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form input[type=password] {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 .form input[type=color] {
   margin: 0 0 15px;
 
@@ -102,8 +124,8 @@ body {
 }
 .label-pl {
   position: absolute;
-  margin-top: -15px;
-  left: 14%;
+  left: 17%;
+  transform: translateY(-250%);
   transition: all .2s ease;
   pointer-events: none;
 }
@@ -111,48 +133,10 @@ input::placeholder {
   opacity: 0;
 }
 input:focus + .label-pl {
-  margin-top: -15px;
+  margin-top: -40px;
   font-size: 12px;
 }
 input:not(:placeholder-shown) +.label-pl {
-  margin-top: -15px;
-  font-size: 12px;
-}
-.label-pl-user {
-  position: absolute;
-  left: 8%;
-  transition: all .2s ease;
-  pointer-events: none;
-}
-input::placeholder {
-  opacity: 0;
-}
-input:focus + .label-pl-user {
-  margin-left: 9px;
-  margin-top: 4px;
-  font-size: 12px;
-}
-input:not(:placeholder-shown) +.label-pl-user {
-  margin-left: 9px;
-  margin-top: 4px;
-  font-size: 12px;
-}
-.label-pl-password {
-  position: absolute;
-  left: 7%;
-  transition: all .2s ease;
-  pointer-events: none;
-}
-input::placeholder {
-  opacity: 0;
-}
-input:focus + .label-pl-password {
-  margin-left: 9px;
-  margin-top: 4px;
-  font-size: 12px;
-}
-input:not(:placeholder-shown) +.label-pl-password {
-  margin-left: 9px;
-  margin-top: 4px;
+  margin-top: -40px;
   font-size: 12px;
 }
