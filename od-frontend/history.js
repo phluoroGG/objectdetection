@@ -6,7 +6,7 @@ if (localStorage.getItem('token') == null) {
         Swal.fire("Недоступно", "Не авторизован!", "warning")
         .then((result) => {
             if (result.isConfirmed) {
-                window.location.replace("https://objectdetection-phluorogg.cloud.okteto.net:5500/login.html");
+                window.location.replace("https://objectdetection-phluorogg.cloud.okteto.net/login.html");
             }
         });
     } else {
@@ -14,7 +14,7 @@ if (localStorage.getItem('token') == null) {
 }
 
 function historyRequest(page) {
-    fetch(`https://objectdetection-back-phluorogg.cloud.okteto.net:8000/history`, {
+    fetch(`https://objectdetection-back-phluorogg.cloud.okteto.net/history`, {
     method: "POST",
     headers: {
         'Content-type': 'application/json',
@@ -30,7 +30,7 @@ function historyRequest(page) {
             Swal.fire("Ошибка", "Ошибка авторизации!", "error")
             .then((result) => {
                 if (result.isConfirmed) {
-                    window.location.replace("https://objectdetection-phluorogg.cloud.okteto.net:5500/login.html");
+                    window.location.replace("https://objectdetection-phluorogg.cloud.okteto.net/login.html");
                 }
             });
         } else if (status == '400') {

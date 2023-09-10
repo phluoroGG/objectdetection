@@ -24,7 +24,7 @@ login_register.addEventListener('click', async (e) => {
 });
 
 function loginRequest() {
-    fetch("https://objectdetection-back-phluorogg.cloud.okteto.net:8000/api/token/", {
+    fetch("https://objectdetection-back-phluorogg.cloud.okteto.net/api/token/", {
     method: "POST",
     headers: {
         'Content-type': 'application/json'
@@ -48,7 +48,7 @@ function loginRequest() {
         if (response != null) {
             console.log(response.access);
             window.localStorage.setItem('token', response.access);
-            window.location.replace("https://objectdetection-phluorogg.cloud.okteto.net:5500/index.html");
+            window.location.replace("https://objectdetection-phluorogg.cloud.okteto.net/index.html");
         }
     })
     .catch(function (error) {
