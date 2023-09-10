@@ -24,6 +24,6 @@ services:
     ports:
       - "5500:80"
     depends_on:
-      - backend
+      - objectdetection-back
 
  
