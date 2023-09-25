@@ -14,6 +14,8 @@ services:
     restart: always
     ports:
       - "8000:8000"
+    volumes:
+      - datavolume:/app
 
   objectdetection:
     container_name: objectdetection
@@ -25,5 +27,7 @@ services:
       - "5500:80"
     depends_on:
       - objectdetection-back
+volumes:
+  datavolume:
 
  
